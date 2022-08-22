@@ -1,20 +1,26 @@
 #product-title {
-  padding: 150px;
-
+  padding: 110px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: 2rem;
 }
 
-#product-description {
+#product-title #product-description {
   padding: 10px;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 #product-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   padding: 50px;
+  margin: 20px;
   color: black;
 }
 .products {
@@ -70,4 +76,15 @@
   align-items: center;
   padding: 20px;
   margin: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  #product-section {
+    display: block;
+  }
+
+  #product-title h2 {
+    display: block;
+    width: 100%;
+  }
 }

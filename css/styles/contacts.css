@@ -1,0 +1,64 @@
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 50px;
+}
+
+footer {
+  padding: 50px;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+.input-control input {
+  border: 5px transparent;
+  border-radius: 5px;
+  font-family: "Bebas Neue", cursive;
+  padding: 5px;
+  width: 100%;
+}
+.input-control label {
+  padding: 0;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#contact-form {
+  display: flex;
+  justify-content: flex-start;
+  padding: 100px;
+
+  width: 30%;
+  height: auto;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+}
+.contact-header img {
+  display: block;
+  width: 250px;
+  height: 200px;
+}
+
+button[type="submit"] {
+  border: 1px solid darkmagenta;
+  color: #fff;
+  background: darkmagenta;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+}
+button[type="submit"]:hover {
+  background: #f44c0e;
+}

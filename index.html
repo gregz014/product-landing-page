@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/styles/forms.css" />
     <link rel="stylesheet" href="/css/styles/products.css" />
+    <link rel="stylesheet" href="/css/styles/portfolio.css" />
+    <link rel="stylesheet" href="/css/styles/contacts.css" />
     <title>Product Landing Page</title>
   </head>
 </html>
@@ -14,24 +16,32 @@
   <header>
     <h1></h1>
     <nav>
-      <ul id="navBar">
-        <li><a href="#product-title">Home</a></li>
-        <li><a href="#product-header">Products & Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#contact-section">Contact</a></li>
-      </ul>
+      <div>
+        <label id="hamburger" for="toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
+        <input type="checkbox" id="toggle" />
+        <ul id="navBar">
+          <li><a href="#product-title">Home</a></li>
+          <li><a href="#product-header">Products</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
   <div id="product-title">
     <h2></h2>
-    <br />
+
     <div id="product-description">
-      <p>
+      <span>
         Our IT solutions company provides several different services that
         provide customers with the guidance and support needed to maintain
         efficient and effective IT systems.
-      </p>
+      </span>
     </div>
   </div>
   <br />
@@ -88,57 +98,91 @@
       >
     </div>
   </div>
-  <h3>Portfolio</h3>
-  <div id="portfolio">
-    <div class="products">
-      <p>Here are some of the Products we implented:</p>
-      <ul>
-        <li>POS System</li>
-        <li>Payroll System</li>
-        <li>Customer Relationship Management Software</li>
-        <li>Database</li>
-      </ul>
+  <div class="portfolio-header">
+    <h3></h3>
+  </div>
+
+  <main id="portfolio" class="main">
+    <section class="slideshow">
+      <div class="slide fade is-active">
+        <span class="slide-number">1 / 3</span>
+        <figure class="slide-image">
+          <img src="/assets/portfolio/POS SYSTEM.png" alt="POS System" />
+          <figcaption>POS System Interface</figcaption>
+        </figure>
+      </div>
+
+      <div class="slide fade">
+        <span class="slide-number">2 / 3</span>
+        <figure class="slide-image">
+          <img src="/assets/portfolio/POS SYSTEM -2.png" alt="Functions" />
+          <figcaption>Cashiering</figcaption>
+        </figure>
+      </div>
+
+      <div class="slide fade">
+        <span class="slide-number">3 / 3</span>
+        <figure class="slide-image">
+          <img
+            src="/assets/portfolio/Add_Menu_with_labels.png"
+            alt="Add Menu"
+          />
+          <figcaption>Adding Menu</figcaption>
+        </figure>
+      </div>
+
+      <div class="controls">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+
+      <div class="dots-container">
+        <span class="dot is-active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+  </main>
+  <div>
+    <div id="contact-section">
+      <form id="contact-form" action="/ThankYou.html" method="get">
+        <div class="input-control">
+          <label for="name">
+            Name:
+            <input
+              id="name"
+              name="name"
+              type="name"
+              placeholder="Enter your Name"
+              required
+            />
+          </label>
+          <br />
+          <label for="email">
+            Email:
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your Email"
+              id="email"
+            />
+          </label>
+          <br />
+          <label for="contact">
+            Contact No.:
+            <input
+              type="number"
+              name="number"
+              placeholder="Enter your Contact Number"
+              id="number"
+            />
+          </label>
+          <br />
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
   </div>
-
-  <div id="contact-section">
-    <form id="contact-form" method="get">
-      <div class="input-control">
-        <label for="name">
-          Name:
-          <input
-            id="name"
-            name="name"
-            type="name"
-            placeholder="Enter your Name"
-            required
-          />
-        </label>
-
-        <label for="email">
-          Email:
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your Email"
-            id="email"
-          />
-        </label>
-
-        <label for="contact">
-          Contact No.:
-          <input
-            type="number"
-            name="number"
-            placeholder="Enter your Contact Number"
-            id="number"
-          />
-        </label>
-
-        <button type="submit">Submit</button>
-      </div>
-    </form>
-  </div>
-
-  <footer>All Rights Reserved</footer>
+  <footer></footer>
+  <script src="script.js"></script>
 </body>

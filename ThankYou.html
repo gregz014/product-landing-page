@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/thankYou.css" />
+    <title>Thank you!</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="wrapper-1">
+        <div class="wrapper-2">
+          <h1 data-name></h1>
+          <p>Thanks for contacting us.</p>
+          <p>you should receive a confirmation email soon</p>
+          <button class="go-home"><a href="/index.html">Home</a></button>
+        </div>
+        <div class="footer-like">
+          <p>
+            Email not received?
+            <a href="#">Click here to send again</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const dataName = document.querySelector("[data-name]");
+        const qStr = window.location.search;
+        const urlParams = new URLSearchParams(qStr);
+        const name = urlParams.get("name");
+
+        dataName.textContent = `Thank you! ${name}`;
+      })();
+    </script>
+  </body>
+</html>
